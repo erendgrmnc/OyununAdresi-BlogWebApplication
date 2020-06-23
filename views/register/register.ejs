@@ -1,0 +1,26 @@
+<%- include("../partials/header"); %> 
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Kayıt Ol</h1>
+    </div>
+
+    <form action="/register" method="POST">
+        <div class="form-group">
+            <input class="form-control" type="text" name="username" placeholder="username">
+        </div>
+        
+        <div class="form-group">
+            <input class="form-control" type="text" name = "password" placeholder="password">
+        </div>
+        
+       
+        <div class="form-group">
+            <button class="form-control btn btn-success" >Sign Up</button>
+        </div>
+    
+    </form>
+</div>
+
+<%- include("../partials/footer"); %> 
+

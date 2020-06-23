@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    
+    <title>Oyunun Adresi</title>
+  </head>
+  <body>
+
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Oyunun Adresi <img src="https://galeri13.uludagsozluk.com/600/super-mario_1215201.png" alt="" style="width: 50px; height: 50px;"></a>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+          
+          </ul>
+          <ul class="navbar-nav">
+              <% if(!currentUser){%>
+
+              
+              <li class="nav-item">
+                  <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/register">Register</a>
+              </li>
+           
+              <% } else{ %>
+
+                <li class="nav-item">
+                    <a class = "nav-link" href="#">Signed In As <%= currentUser.username %></a>
+                </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li> 
+        <%}%>
+          </ul>
+      </div>
+  </nav>
+
+  <div class="container">
+    <% if(success && success.length > 0){%>
+    <div class="alert alert-success mt-4 mb-5" role="alert">
+      <%= success %>
+    </div>
+    <%} if(error && error.length >0){%>
+    <div class="alert alert-danger mt-4 mb-5" role="alert">
+      <%= error %>
+    </div>
+    <%}%>
+  </div>
+
+ 
