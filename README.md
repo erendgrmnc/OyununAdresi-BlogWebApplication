@@ -5,7 +5,7 @@ Created By Eren Değirmenci(2020)
 <br>
 +App includes user profiles and users can able to make comments on blogs.
 <br>
-+Comatible with all screen sizes.
++Compatible with all screen sizes.
 
 <--Screenshots(Desktop)-->
 <br>
